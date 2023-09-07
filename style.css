@@ -88,7 +88,7 @@ body {
   text-decoration: line-through;
 }
 
-@media screen and (min-width: 610px) {
+@media screen and (min-width: 1440px) {
   /* Card style for setting the card's elements in a row or on the same level */
   .card-container {
     width: 600px;
