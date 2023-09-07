@@ -1,145 +1,145 @@
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
 
-/* Normal HTML tag styles */
-
-/* Heading styles fonts, font-weight and color */
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: "Fraunces", serif;
-  font-weight: 700;
-  color: hsl(212, 21%, 14%);
-}
-/* paragraph styles fonts, font-size, font-weight and color */
-p {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  color: hsl(228, 12%, 48%);
-}
-/* Set so that the footer is always at the bottom of the page */
-footer {
-  position: absolute;
-  bottom: 0;
-}
-/* Centers all html children elements within body to the center of page */
-body {
+* {
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  font-family: "Montserrat";
+  height: 100%;
   background-color: hsl(30, 38%, 92%);
 }
-
-/* Custom Property styles */
-
-/* Frontend Mentor Attribution style */
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
-.perfume-heading {
-  letter-spacing: 6px;
-}
-
-/* Cart-button style */
-.cart-button {
+.main {
   width: 100%;
-  height: 45px;
-  font-weight: 700;
-  font-family: "Montserrat", sans-serif;
-  background-color: hsl(158, 36%, 37%);
-  color: white;
-  border-radius: 8px;
-  margin-top: 10px;
-  border: none;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-/* cart hover style */
-.cart-button:hover {
-  background-color: hsl(158, 36%, 20%);
-  border: none;
-}
-/* trolley icon css */
-.cart-button svg {
-  margin-right: 10px;
-}
-
-/* sets price container elements in a row and sets them to the left */
-.price-container {
+.card {
+  width: 500px;
+  border-radius: 10px;
+  box-shadow: 0px 2px #58585867;
+  overflow: hidden;
   display: flex;
   flex-direction: row;
-  justify-content: left;
+  height: 500px;
+  background-color: white;
+}
+.left {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+.left img {
+  width: 100%;
+  transition: all 0.6s ease;
+  height: 100%;
+  object-fit: cover;
+}
+.right {
+  width: 50%;
+  padding: 30px;
+  margin-top: 20px;
+  height: 100%;
+}
+h2 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+p {
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 40px;
+  color: rgba(0, 0, 0, 0.609);
+}
+.txt {
+  font-weight: 500;
+  margin-top: -20px;
+}
+.pricing {
+  display: flex;
   align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  margin-top: 30px;
 }
-/* adds space between the new sale price and old sale price*/
-.price-container h1 {
+h3 {
+  font-family: "Fraunces", serif;
   color: hsl(158, 36%, 37%);
-  margin-right: 20px;
+  font-size: 2.01rem;
 }
-/* adds a line through the old price */
-.price-container p {
+#txt {
   text-decoration: line-through;
 }
-
-@media screen and (min-width: 1440px) {
-  /* Card style for setting the card's elements in a row or on the same level */
-  .card-container {
-    width: 600px;
-    height: 450px;
-    background-color: white;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  /* Card image style for desktop design */
-  .product-image {
-    background-image: url("images/image-product-desktop.jpg");
-    width: 300px;
-    height: 450px;
-    background-position: center;
-    background-size: cover;
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
-  }
-  /* sets product information width and margin in desktop design*/
-  .product-info {
-    width: 240px;
-    margin: 0 auto;
-  }
+button {
+  background-color: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+  font-family: "Montserrat";
+  width: 100%;
+  cursor: pointer;
+  margin-top: 20px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+}
+img:hover {
+  transform: scale(1.076);
+  cursor: pointer;
 }
 
-@media screen and (max-width: 610px) {
-  /* Card style for mobile design which sets all child elements in a column */
-  .card-container {
-    width: 350px;
-    height: 650px;
-    background-color: white;
-    border-radius: 12px;
+@media (max-width: 450px) {
+  .card {
     display: flex;
     flex-direction: column;
+    width: 90%;
+    height: 90%;
+  }
+  .right {
+    width: 100%;
+    height: 65%;
+    display: grid;
+    place-items: center;
+  }
+  .left {
+    width: 100%;
+    height: 35%;
+  }
+  h2 {
+    padding: 0;
+    width: 100%;
     text-align: left;
+    font-size: 35px;
+    margin-top: -30px;
+    font-weight: 900;
   }
-  /* product image style which sets image to product mobile image */
-  .product-image {
-    background-image: url("images/image-product-mobile.jpg");
-    width: inherit;
-    height: 400px;
-    background-position: center;
-    background-size: cover;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
+  h3 {
+    margin-top: -20px;
+    font-size: 40px;
   }
-  /* sets product information width and margin in mobile design*/
-  .product-info {
-    width: 295px;
-    margin: 20px auto;
+  p {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  .txt {
+    margin-top: -50px;
+  }
+  .pricing {
+    margin-top: 0px;
+  }
+  button {
+    margin-top: -30px;
+  }
+  .perf {
+    text-align: left;
+    width: 100%;
+    margin-top: -39px;
+  }
+  #txt {
+    margin-top: -10px;
   }
 }
