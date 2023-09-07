@@ -101,7 +101,7 @@ body {
   }
   /* Card image style for desktop design */
   .product-image {
-    background-image: url("../images/image-product-desktop.jpg");
+    background-image: url("images/image-product-desktop.jpg");
     width: 300px;
     height: 450px;
     background-position: center;
@@ -129,7 +129,7 @@ body {
   }
   /* product image style which sets image to product mobile image */
   .product-image {
-    background-image: url("../images/image-product-mobile.jpg");
+    background-image: url("images/image-product-mobile.jpg");
     width: inherit;
     height: 400px;
     background-position: center;
